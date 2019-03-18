@@ -1,0 +1,133 @@
+﻿
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button class="no-text">
+            </ion-nav-back-button>
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+            </ion-nav-buttons>
+            
+              
+             <ion-nav-buttons side="right">
+                <button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
+            </ion-nav-buttons>
+   
+
+            
+        </ion-nav-bar>
+        <!--<button id="fab" class="button button-positive button-fab button-fab-bottom-right">
+            <i class="icon ion-social-twitter"></i>-->
+        </button>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="expanded" >
+         <a href="#/app/toutes" nav-clear menu-close>   <img src="img/logo.png" class="avatar motion spin fade"></a>
+            
+        </ion-header-bar>
+              <div class="row">
+              
+               </div>
+        <ion-content class="stable-bg has-expanded-header">
+         
+           
+                <div class="row">
+                    <div class="col" style="border-style: none;">
+                <a nav-clear menu-close href="#/app/fruit" style="text-decoration: none;">
+                    <button class="  button-block button-balanced "><br><img src="img/menu/1.png" height="40h" width="40"><br>{{m1}}</button>
+                    
+                </a>
+                   </div>
+                   <div class="col" style="border-style: none;">
+                <a nav-clear menu-close href="#/app/boucherie" style="text-decoration: none;">
+                   <button class=" button-block button-assertive "><br><img src="img/menu/2.png" height="40" width="40"><br> {{m2}}</button>
+                  
+                </a>
+                  </div>
+                  
+                </div>
+                 <div class="row">
+                    <div class="col" style="border-style: none;">
+                <a nav-clear menu-close href="#/app/boulangerie" style="text-decoration: none;">
+                    <button class="   button-block button-energized "><br><img src="img/menu/3.png" height="40" width="40"><br> {{m3}}</button>
+                   
+                </a>
+                   </div>
+                   <div class="col" style="border-style: none;">
+                <a nav-clear menu-close href="#/app/poissonerie" style="text-decoration: none;">
+                   <button class="  button-block ink-dark button-calm "><br><img src="img/menu/4.png" height="40" width="40"><br>
+                   {{m4}}</button>
+                </a>
+                <a nav-clear menu-close href="#/app/client">
+                    
+                </a>
+                 </div>
+                 
+                </div>
+                <div class="row">
+                     <div class="col" style="border-style: none;">
+                       <a nav-clear menu-close href="#/app/alimentation" style="text-decoration: none;">
+                         <button class="  button-block ink-dark alimentation "><br><img src="img/menu/5.png" height="40" width="40"><br> {{m5}}</button>
+                    </a>
+               
+                 </div>
+                    <div class="col" style="border-style: none;">
+                       <a nav-clear menu-close href="#/app/no_food" style="text-decoration: none;">
+                         <button class="   button-block no-food "><br><img src="img/menu/6.png" height="40" width="40"><br> {{m6}}</button>
+                   
+                       </a>
+                   </div>
+                </div>
+            </ion-list>
+               
+              <div class="row">
+                <div class="col" style="border-style: none;">
+                <a href="tel:+32472910917" class="item ">
+                  <center><img src="img/menu/m.png" height="20" width="20"></center> 
+
+                </a>
+                </div>
+                <div class="col" style="border-style: none;">
+                <a  href="tel:+3243410460" class="item ">
+                    <center><img src="img/menu/t.png" height="20" width="20"></center> 
+                   
+                </a>
+                </div>
+                
+            </div>
+            <div class="row">
+              <div class="col" style="border-style: none;">
+                    
+                <a href="https://www.google.tn/maps/place/Avenue+de+Lille+2,+4020+Li%C3%A8ge,+Belgique/@50.6471802,5.60036,17z/data=!3m1!4b1!4m5!3m4!1s0x47c0f0bddce738dd:0xb2c6b6af1e289179!8m2!3d50.6471802!4d5.6025487?hl=fr" class="item ">
+                    <center><img src="img/menu/l.png" height="20" width="20"></center>
+                    
+                </a>
+             </div>
+              <div class="col" style="border-style: none;">
+                    
+                <a href="https://www.facebook.com/taaj.liege/" class="item ">
+                    <center><img src="img/menu/f.png" height="20" width="20"></center>
+                    
+                </a>
+             </div>
+             </div> 
+            
+          <!--  <ion-list>
+                <a  >
+                  <div class="button-bar">
+                    <button class="nav-clear menu-close button button-fab button-balanced icon ion-leaf">fruit </button>
+                    <button class="nav-clear menu-close button button-fab button-assertive icon ion-bug">Boucherie</button>
+                  </div>
+                </a>
+               <a  >
+                <div class="button-bar">
+                    <button class="nav-clear menu-close button button-fab ink-dark button-calm icon ion-tshirt"> Poissonerie</button>
+                
+                    <button class="nav-clear menu-close button button-fab ink-dark button-energized icon ion-tshirt">Boulangerie</button>
+                </div>
+               </a> 
+            </ion-list>-->
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

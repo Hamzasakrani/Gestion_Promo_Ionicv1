@@ -1,0 +1,56 @@
+<ion-view view-title="{{myTitleVar}}">
+	  <ion-content ng-controller="DetaiCtrl">
+	  	 <div class="row" ng-repeat="detai in data">
+	  	 	<div class="list card stable-bg" style="width: 100%">
+	  	 		<div class="row {{detai.color}} center"><center><span>{{detai.nomcat}}</span></center></div>
+                <div class="item ">
+                    <center><img src="http://seedup.tn/promoapp/public/{{detai.image}}"></center>
+                  </div>
+                  <div class="item tabs tabs-secondary tabs-icon-left" ng-if="detai.idt==1||detai.idt==3 ">
+                    <!--solde -->
+                    <h2  ng-if="detai.idt==1" style="font-weight: bold;">{{detai.pourcentage}}%</h2><h1  ng-if="detai.idt==1"> {{detai.ancienprix}}€/{{detai.unite}}</h1>
+                    <!--reduction -->
+                    <h3 ng-if="detai.idt==3" style="font-weight: bold;"><del>{{detai.ancienprix}}€/{{detai.unite}}</del></h3><h1 ng-if="detai.idt==3" class="taille"> {{detai.nouveauprix}}€/{{detai.unite}}</h1>
+                     <!--gratuite -->
+                    
+                </div>
+                <div class="item  tabs-secondary tabs-icon-left" ng-if="detai.idt==4 "> 
+                  <center>
+                <h2   style="font-weight: 900;font-size: 28px;"  >{{detai.nombrearticleachete}}+{{detai.nombrearticlegratuit}}gratuite</h2>
+                      
+                     <h1 class="taille "  >{{detai.ancienprix}}€/{{detai.unite}}</h1>
+                     </center>
+                </div>
+                  
+                <div class="" ng-if="detai.idt==2 "> 
+                    <hr>
+                     <center>
+                        <h2  style="font-weight: 900;" class="taille1" ng-if="detai.ancienprix!=null" >{{detai.ancienprix}}€</h2>
+                     <h2  ng-if="detai.idt==2" >{{detai.libre}}</h2>
+                     </center>
+                </div>     
+                <div class="row">
+                
+                    <h2 style="font-style: oblique; ">Produit:<span style="color:green;"> {{detai.produit}}</span></h2> 
+                   
+                 </div>  
+                 <div class="row">
+                 	
+                 	<h4 ng-if="detai.datedebut!=null">date debut:</h4> <h4 style="color: green">{{detai.datedebut}} </h4>
+                     </div>
+                     <div class="row">
+                   	 <h4 ng-if="detai.datefin!=null">date fin:</h4>	<h4 style="color: red">{{detai.datefin}}</h4>
+                   </div>
+                  
+                  <div class="row">
+                 	<h3  ng-if="detai.remarque!=null">NB:</h3><br>
+                 	
+                 </div>  
+                 <div class="row"><p>{{detai.remarque}}</p></div>
+                 </div>  
+                             
+               
+            </div>
+         </div>
+      </ion-content>
+</ion-view>	

@@ -1,0 +1,85 @@
+﻿
+<ion-view view-title="{{myTitleVar}}" >
+   
+    <ion-content ng-controller="ToutesCtrl" >
+          <ion-refresher on-refresh="doRefresh()"
+                         pulling-text="Pull to refresh..."
+                         refreshing-text="Refreshing!"
+                         refreshing-icon="ion-loading-c">
+
+          </ion-refresher>
+       <!-- <ion-item>
+               <label class="item item-input">
+                 <span class="input-label">date debut</span>
+                 <input type="date" ng-model="data.dated" >
+               </label>
+                <label class="item item-input">
+                 <span class="input-label">date fin</span>
+                 <input type="date" ng-model="data.datef" >
+               </label>
+               <input class="button button-block button-positive" type="submit" name="submit" value="recherche" ng-click="recherche(data)">                    
+                </form>
+              <div class="card">
+                    <div class="item item-text-wrap">
+                        Response: <b ng-bind="response"></b>
+                    </div>
+                </div>
+             </ion-item>-->
+              <div class="row ">
+              <img  src="img/promo.jpg" style="width: 100% " class="bar-assertive" height="200">
+              </div>
+         <div class="row" ng-repeat="promo in promos">
+            
+            <div class="list card {{promo.color}}" style="width: 100%" ng-click="detai({{promo.idp}})">
+                
+                <div class="row" >
+                
+                  <div class="center"><h5 class="prix">{{promo.nomcat}}</h5></div>
+                   <center> </center> 
+                   </div> 
+               
+                <!--style="width: 100%; background-color: grey;opacity: 0.2;"-->
+                
+                 
+                <div class="row">
+                    <div class="col" style="border-style: none;">
+                <br><h3 class="prix ">{{promo.produit}}</h3>
+            </div><div class="col" style="border-style: none;">
+                <div class="item " >
+                    <img src="http://seedup.tn/promoapp/public/{{promo.image}}" >
+                    
+                </div>
+                </div>
+                </div> 
+                <div class="row">
+                   <h5 class="prix" ng-if="promo.remarque!=null">* {{promo.remarque}}</h5>
+                </div>                 
+                <div class="item tabs tabs-secondary tabs-icon-left promo" ng-if="promo.idt==1 || promo.idt==3 ">
+                    <!--solde -->
+                    <br>
+                    <h2 class="prix" ng-if="promo.idt==1">{{promo.pourcentage}}%</h2><h1 class="prix " ng-if="promo.idt==1"> {{promo.ancienprix}}€/{{promo.unite}}</h1>
+                    <br>
+                    <!--reduction -->
+                    <h3  ng-if="promo.idt==3" style="font-weight: 900;"><del>{{promo.ancienprix}}€/{{promo.unite}}</del></h3><h1 class="prix taille" ng-if="promo.idt==3"> {{promo.nouveauprix}}€/{{promo.unite}}</h1>
+                     <!--gratuite -->
+                     <br>
+                     
+                </div>
+                <div class="item  tabs-secondary tabs-icon-left" ng-if="promo.idt==4 "> 
+                  <center>
+                <h2  style="font-weight: 900;" ng-if="promo.idt==4" >{{promo.nombrearticleachete}}+{{promo.nombrearticlegratuit}}gratuite</h2>
+                      
+                     <h1 class="prix taille1 " ng-if="promo.idt==4" >{{promo.ancienprix}}€/{{promo.unite}}</h1>
+                     </center>
+                </div>  
+                <div class=" center" ng-if="promo.idt==2 "> 
+                  <hr>
+                     <center>
+                      <h2  style="font-weight: 900;" class="taille1" ng-if="promo.ancienprix!=null" >{{promo.ancienprix}}€</h2>
+                     <h2 class="prix " ng-if="promo.idt==2" >{{promo.libre}}</h2>
+                     </center>
+                </div>     
+            </div>
+          </div>
+     </ion-content>
+</ion-view>
